@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index.html</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <h1 class="titulo">Eduardo Bayer </h1>
+    <br>
+    <p class="pessoal">Meu nome é Eduardo,tenho 19 anos e estou tendo meu primeiro contato com programação,moro em Sertão Santana-RS. Estou gostando muito de cursar a faculdade de ADS, moro com minha família no interior, trabalho junto com o meu pai na roça e no meu tempo livre gosto de estudar e jogar vídeo game. </p>
+
+    <button class="botao">Clique aqui para ver uma mensagem!</button>
+    <br>
+
+    <script>
+        const botaoMensagem = document.querySelector('.botao');
+        let mensagemOriginal = botaoMensagem.textContent; // Guarda a mensagem original
+
+        botaoMensagem.addEventListener('click', function() {
+            if (botaoMensagem.textContent === mensagemOriginal) {
+                botaoMensagem.textContent = 'Bem vindo(a) ao meu trbalho!';
+            } else {
+                botaoMensagem.textContent = mensagemOriginal; // Volta para a mensagem original no próximo clique
+            }
+        });
+    </script>
+
+    <h2>Meus hobbies:</h2>
+    <ol>
+        <li id="lista">Jogar vídeo game.</li>
+        <li id="lista">Ver lives/vídeo no youtube.</li>
+        <li id="lista">Visitar minha namorada aos finais de semana.</li>
+    </ol>
+    <h2>Meu jogo preferido:</h2>
+    <img src="darksouls.jpg" width="500">
+
+    <h2>Países que eu gostaria de visitar:</h2>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #fff700;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #fffb00b2;
+        }
+        td img {
+            max-width: 150px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+
+    <table>
+        <thead>
+            <tr>
+                <th>País</th>
+                <th>Imagem</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Japão</td>
+                <td><img src="japão.jpg"></td>
+            </tr>
+            <tr>
+                <td>Portugal</td>
+                <td><img src="Lisboa.jpg"></td>
+            </tr>
+            <tr>
+                <td>Estados Unidos</td>
+                <td><img src="nova-york.jpg"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a class="link" href="https://pt.wikipedia.org/wiki/Dark_Souls_III">Wiki Dark souls 3</a>
+
+</body>
+</html>
